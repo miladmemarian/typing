@@ -66,3 +66,11 @@ body {
   margin-right: auto;
   color: rgb(77, 77, 77);
 }
+
+.letter {
+  margin-top: 30px;
+  color: rgb(30, 144, 255);
+  font-size: 5em;
+  font-family: Muli;
+  text-align: center;
+}
