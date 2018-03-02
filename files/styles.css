@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.body {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(77, 77, 77);
+  margin: 0;
+}
+
+.input {
+  width: 400px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  padding-top: 0;
+  padding-left: 0;
+  line-height: 1 em;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(77, 77, 77);
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.text {
+  text-align: center;
+  font: 5rem;
+  font-family: Muli;
+  font-weight: 200;
+  font-size: 5rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.user {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add {
+  width: 150px;
+  height: 100px;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 2em;
+  font-family: Muli;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(77, 77, 77);
+}
