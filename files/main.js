@@ -5,11 +5,40 @@ function $text(text, position) {
   $text.textContent = text
   entry = text.split('')
   $letter.textContent = entry[position]
+  $feedback()
+
   return $text
 }
 
 function renderText(component, container) {
   container.appendChild(component)
+}
+
+function $feedback() {
+  document.addEventListener('keydown', function (event) {
+    if (event.defaultPrevented) {
+      return
+    }
+    if (event.key === entry[position]) {
+      $letter.classList.add('correct')
+      setTimeout(function () {
+        $letter.classList.toggle('correct')
+      }, 200)
+    }
+    else {
+      $letter.classList.add('wrong')
+      setTimeout(function () {
+        $letter.classList.toggle('wrong')
+      }, 200)
+    }
+    $letter.textContent = entry[position]
+    event.preventDefault()
+  })
+  document.addEventListener('keyup', function (event) {
+    position++
+    $letter.textContent = entry[position]
+    event.preventDefault()
+  })
 }
 
 var $add = document.querySelector('.add')

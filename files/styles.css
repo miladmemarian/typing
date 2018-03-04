@@ -74,3 +74,11 @@ body {
   font-family: Muli;
   text-align: center;
 }
+
+.correct {
+  color: #090;
+}
+
+.wrong {
+  color: #b22;
+}
