@@ -76,9 +76,29 @@ body {
 }
 
 .correct {
-  color: #090;
+  animation: correctBlink 0.5s;
 }
 
 .wrong {
-  color: #b22;
+  animation: wrongBlink 0.5s;
+}
+
+@keyframes correctBlink {
+  0% {
+    color: rgb(30, 144, 255);
+  }
+
+  100% {
+    color: #090;
+  }
+}
+
+@keyframes wrongBlink {
+  0% {
+    color: rgb(30, 144, 255);
+  }
+
+  100% {
+    color: #b22;
+  }
 }
