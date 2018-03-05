@@ -12,21 +12,28 @@ function renderText(component, container) {
   container.appendChild(component)
 }
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keypress', function (event) {
   if (event.target.classList.contains('input')) {
     return
   }
-  if (event.key === entry[position]) {
-    $letter.classList.add('correct')
+  if (position < entry.length) {
+    if (event.key === entry[position]) {
+      score++
+      $letter.classList.add('correct')
+    }
+    else {
+      $letter.classList.add('wrong')
+    }
+    setTimeout(function () {
+      position++
+      $letter.textContent = entry[position]
+      $letter.classList.remove('wrong', 'correct')
+    }, 500)
   }
   else {
-    $letter.classList.add('wrong')
+    $letter.textContent =
+      score + ' correctly typed characters out of ' + entry.length
   }
-  setTimeout(function () {
-    position++
-    $letter.textContent = entry[position]
-    $letter.classList.remove('wrong', 'correct')
-  }, 500)
 })
 
 var $add = document.querySelector('.add')
@@ -40,3 +47,4 @@ $add.addEventListener('click', function () {
 var $letter = document.querySelector('.letter')
 var position = 0
 var entry = []
+var score = 0
